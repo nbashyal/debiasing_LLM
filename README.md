@@ -4,6 +4,7 @@ The main focus of the project is to implement different debiasing techniques to 
 
 Fine-tuning GPT-2 with transformer architecture changes: This technique involves freezing one or more layers of the GPT-2 model during the fine-tuning process. This will allow the model to learn from the dataset without the influence of the frozen layers, which can help reduce the bias in the output.
 
-Identifying updates during feed forward layer and de-weighting bias tokens during updates: This technique involves identifying updates during the feed forward layer of the model and de-weighting bias tokens during these updates. This will help reduce the impact of biased tokens on the final output of the model.
+We will investigate the use of masking techniques to identify and modify the updates during the feedforward layers of the GPT-2 model. Specifically, we will de-weight the contribution of bias tokens during these updates to reduce their impact on the model's predictions.
+To achieve this, we will first identify the tokens that are associated with biased language using existing bias measurement techniques. Then, we will use a masking technique to zero out the gradients for these tokens during the feedforward layers. This approach will effectively reduce the contribution of the biased tokens to the model's predictions.By de-weighting the impact of the biased tokens in this way, we expect to mitigate the effects of bias in the GPT-2 model and improve its overall performance.
 
 This project will be updated with the results of the experiments conducted using these debiasing techniques. The project code is available on GitHub and contributions from the community are welcome.
